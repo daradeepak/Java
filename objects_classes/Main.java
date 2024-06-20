@@ -30,7 +30,6 @@ class Palindrome
 				rev=rev*10+rem;
 				temp/=10;
 			}
-			return rev;
-		
+			return rev;	
 	}
 }
