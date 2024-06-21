@@ -14,7 +14,12 @@ public class Main
 //		p.p5();
 //		p.p6();
 //		p.p7();
-		p.p8();
+//		p.p8();
+//		p.p9();
+//		p.p10();
+//		p.p11();
+//		p.p12();
+		p.p13();
 	}
 
 }
@@ -113,11 +118,108 @@ class Pb
 		for(int i=0; i<s.length(); i++)
 		{
 			if(Character.isAlphabetic(s.charAt(i)))
-				s1 += s.charAt(i);	
+			s1 += Character.toLowerCase(s.charAt(i));
 		}
 		System.out.println(s1);
 		
-		StringBuffer sb = new 
+		String temp = s1;
+		
+		StringBuffer sb = new StringBuffer(temp);
+		
+		sb.reverse();
+		System.out.println(sb);
+		
+		String rev = sb.toString();
+		
+		if(rev.equals(s1))
+			System.out.println("Palindrome");
+		else
+			System.out.println("Not a palindrome");
 	}
+	
+	void p9()
+	{
+		String s = "hello good morning";
+		char c[] = s.toCharArray();
+		
+		for(char temp:c)
+			System.out.println(temp);
+	}
+	
+	void p10()
+	{
+		String s ="abc";
+		
+		for(int i=0; i<s.length(); i++)
+		{
+			for(int j=i+1; j<=s.length(); j++)
+			{
+				System.out.println(s.substring(i, j));
+			}
+		}
+	}
+	
+	void p11()
+	{
+		String s = "madam arora teaches malayalam";
+		String str[] = s.split(" ");
+		
+		for(String temp: str)
+		{
+			StringBuffer sb = new StringBuffer(temp);
+			
+			sb.reverse();
+			
+			String s2 = sb.toString();
+			
+			if(temp.equals(s2))
+				System.out.println(temp);
+		}
+	
+	}
+	
+	void p12()
+	{
+		String s = "AppLE";
+		String s1 = "";
+				   //aPPle
+		
+		for(int i=0; i<s.length(); i++)
+		{
+			if(Character.isUpperCase(s.charAt(i)))
+				s1 += Character.toLowerCase(s.charAt(i));
+			else
+				s1 += Character.toUpperCase(s.charAt(i));
+		}
+		System.out.println(s1);
+	}
+	
+	void p13()
+	{
+		StringBuilder sb = new StringBuilder("Hello");
+		String s = "deepak";
+	
+		System.out.println(sb.capacity());
+		
+		StringBuffer sb1 = new StringBuffer("deepak");
+		System.out.println(sb1.append(true));
+		
+		StringBuilder sb2 = new StringBuilder("deepak");
+		StringBuilder sb3 = new StringBuilder("deepak");
+		
+		System.out.println(sb2.equals(sb3));
+//		System.out.println(sb2.append(true));
+		
+//		System.out.println(s.contentEquals(sb2));
+		
+		
+		StringBuilder sb4 = new StringBuilder("dara deepak");
+		System.out.println(sb4.delete(0, 5));
+		System.out.println(sb4.replace(0, 3, "hii"));
+		
+		
+		
+	}
+	
 		
 }
