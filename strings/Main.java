@@ -19,7 +19,10 @@ public class Main
 //		p.p10();
 //		p.p11();
 //		p.p12();
-		p.p13();
+//		p.p13();
+//		p.p14();
+//		p.p15();
+		p.p16();
 	}
 
 }
@@ -148,15 +151,18 @@ class Pb
 	
 	void p10()
 	{
-		String s ="abc";
+		String s ="Hel";
 		
+		int count=1;
 		for(int i=0; i<s.length(); i++)
 		{
 			for(int j=i+1; j<=s.length(); j++)
 			{
 				System.out.println(s.substring(i, j));
+				count++;
 			}
 		}
+		System.out.println("Count: 9" +count);
 	}
 	
 	void p11()
@@ -197,7 +203,7 @@ class Pb
 	void p13()
 	{
 		StringBuilder sb = new StringBuilder("Hello");
-		String s = "deepak";
+		String s = "mom";
 	
 		System.out.println(sb.capacity());
 		
@@ -216,10 +222,49 @@ class Pb
 		StringBuilder sb4 = new StringBuilder("dara deepak");
 		System.out.println(sb4.delete(0, 5));
 		System.out.println(sb4.replace(0, 3, "hii"));
-		
-		
-		
+			
 	}
 	
+	void p14()
+	{	
+		String s = "deepak";
+		StringBuffer sb = new StringBuffer("deepak");
 		
+		String rev = sb.reverse().toString();
+		
+		if(rev.compareTo(s) == 0)
+			System.out.println("Palindrome");
+		else 
+			System.out.println("Not a palindrome");
+			
+	}
+	
+	void p15() 
+	{
+	    String s = "deepak";
+	    StringBuilder sb = new StringBuilder();
+
+	    String lastTwo = s.substring(s.length()-2, s.length());
+	    System.out.println(lastTwo);
+	    
+	    sb.append(lastTwo);
+
+	    for(int i=0; i<s.length()-2; i++) 
+	    {
+	       sb.append(s.charAt(i));
+	    }
+
+	    System.out.println(sb.toString());
+	}
+	
+	void p16() 
+	{
+	    String s1 = "<<>>";
+	    String s2 = "world";
+	    String output = "";
+
+	    output = s1.substring(0, 2) + s2 + s1.substring(2);
+	        
+	    System.out.println(output); 	 
+	}
 }
