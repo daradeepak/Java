@@ -11,13 +11,20 @@ public class SumOfNumber {
 		System.out.println("Enter a number");
 		int num = sc.nextInt();
 		
-		int start = 0, sum=0;		
-		while(start<=num) 
+//		int start = 0, sum=0;		
+//		while(start<=num) //0<=10
+//		{
+//			sum = sum+start; //0=0+
+//			start++;
+//		}
+//		System.out.println(sum);
+		
+		int res=0;
+		for(int i=0; i<=num; i++)
 		{
-			sum = sum+start; 
-			start++;
+			res=res+i;
 		}
-		System.out.println(sum);
+		System.out.println(res);
 
 	}
 

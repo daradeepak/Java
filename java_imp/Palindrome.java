@@ -17,8 +17,12 @@ public class Palindrome {
 			rev=rev*10+rem;
 			num=num/10;
 		}
-		
-		System.out.println(temp==rev?"Palindrom":"Not a palindrome");
+		if(temp==rev)
+			System.out.println("Palindrome");
+		else
+			System.out.println("Not a palindrome");
+			
+//		System.out.println(temp==rev?"Palindrom":"Not a palindrome");
 	}
 
 }
